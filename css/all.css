@@ -393,8 +393,7 @@ body {
   max-width: 1295px;
   margin: 0 auto;
 }
-
-.pricing-title h3 {
+.pricing .pricing-title h3 {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 900;
@@ -408,30 +407,28 @@ body {
   margin-bottom: 160px;
   gap: 24px;
 }
-
-.pricing-card {
-  display: flex;
-  flex-direction: column;
+.pricing-cards .pricing-card {
   width: calc((100% - 24px) / 2);
   border: 1px solid #525252;
   border-radius: 16px;
 }
-.pricing-card .plan-desc {
+.pricing-cards .pricing-card a .plan-desc {
   flex-grow: 1;
+  align-items: stretch;
   padding: 20px 32px;
   padding-bottom: 136px;
 }
-.pricing-card .plan-desc h4 {
+.pricing-cards .pricing-card a .plan-desc h4 {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 900;
   margin-bottom: 12px;
 }
-.pricing-card .plan-desc ul {
+.pricing-cards .pricing-card a .plan-desc ul {
   font-size: 1rem;
   line-height: 1.5;
 }
-.pricing-card .plan-desc ul li::before {
+.pricing-cards .pricing-card a .plan-desc ul li::before {
   content: "";
   display: inline-block;
   width: 3px;
@@ -441,34 +438,34 @@ body {
   margin: 10px;
   vertical-align: middle;
 }
-.pricing-card .plan-toolbar {
+.pricing-cards .pricing-card .plan-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 32px;
   border-top: 1px solid #525252;
 }
-.pricing-card .plan-toolbar .price {
+.pricing-cards .pricing-card .plan-toolbar .price {
   font-size: 1.25rem;
   line-height: 1.2;
   font-weight: 900;
 }
-.pricing-card .plan-toolbar .price span {
+.pricing-cards .pricing-card .plan-toolbar .price span {
   font-size: 1.25rem;
   line-height: 1.2;
   color: #919191;
   font-weight: 400;
 }
-.pricing-card .plan-toolbar .use {
+.pricing-cards .pricing-card .plan-toolbar .use {
   display: flex;
   align-items: center;
 }
-.pricing-card .plan-toolbar .use p {
+.pricing-cards .pricing-card .plan-toolbar .use p {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 700;
 }
-.pricing-card .plan-toolbar .use span {
+.pricing-cards .pricing-card .plan-toolbar .use span {
   width: 10px;
   padding: 14.67px;
 }/*# sourceMappingURL=all.css.map */
