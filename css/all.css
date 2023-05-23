@@ -408,27 +408,28 @@ body {
   gap: 24px;
 }
 .pricing-cards .pricing-card {
+  display: flex;
+  flex-direction: column;
   width: calc((100% - 24px) / 2);
   border: 1px solid #525252;
   border-radius: 16px;
 }
-.pricing-cards .pricing-card a .plan-desc {
+.pricing-cards .pricing-card .plan-desc {
   flex-grow: 1;
-  align-items: stretch;
   padding: 20px 32px;
   padding-bottom: 136px;
 }
-.pricing-cards .pricing-card a .plan-desc h4 {
+.pricing-cards .pricing-card .plan-desc h4 {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 900;
   margin-bottom: 12px;
 }
-.pricing-cards .pricing-card a .plan-desc ul {
+.pricing-cards .pricing-card .plan-desc ul {
   font-size: 1rem;
   line-height: 1.5;
 }
-.pricing-cards .pricing-card a .plan-desc ul li::before {
+.pricing-cards .pricing-card .plan-desc ul li::before {
   content: "";
   display: inline-block;
   width: 3px;
