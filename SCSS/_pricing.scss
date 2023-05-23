@@ -1,0 +1,81 @@
+.pricing {
+	max-width: 1295px;
+	margin: 0 auto;
+}
+
+.pricing-title h3 {
+	@include font($fz-h3, $lh-h3);
+	font-weight: 900;
+	margin-bottom: 80px;
+}
+
+.pricing-cards {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1296px;
+	margin-bottom: 160px;
+	gap: 24px;
+}
+
+.pricing-card {
+	display: flex;
+	flex-direction: column;
+	width: calc((100% - 24px) / 2);
+	border: 1px solid $black-80;
+	border-radius: 16px;
+
+	.plan-desc {
+		flex-grow: 1;
+		padding: 20px 32px;
+		padding-bottom: 136px;
+		h4 {
+			@include font($fz-h3, $lh-h3);
+			font-weight: 900;
+			margin-bottom: 12px;
+		}
+		ul {
+			@include font($fz-body, $lh-body);
+			li::before {
+				content: "";
+				display: inline-block;
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				background-color: $white;
+				margin: 10px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.plan-toolbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 32px;
+		border-top: 1px solid $black-80;
+
+		.price {
+			@include font($fz-h6, $lh-h6);
+			font-weight: 900;
+			span {
+				@include font($fz-h6, $lh-h6);
+				color: $black-60;
+				font-weight: 400;
+			}
+		}
+
+		.use {
+			display: flex;
+			align-items: center;
+			p {
+				@include font($fz-body, $lh-body);
+				font-weight: 700;
+			}
+			span {
+				width: 10px;
+				padding: 14.67px;
+			}
+		}
+	}
+}

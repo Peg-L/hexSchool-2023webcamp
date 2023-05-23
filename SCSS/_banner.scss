@@ -1,0 +1,134 @@
+.banner {
+	max-width: 1296px;
+	margin: 0 auto;
+}
+
+.main-intro {
+	@include font($fz-display2, $lh-display2);
+	font-weight: bold;
+	color: $white;
+	margin-bottom: 40px;
+}
+
+.callToAction {
+	margin-bottom: 100px;
+	a {
+		width: 160px;
+		display: block;
+		@include font($fz-h6, $lh-h6);
+		color: $white;
+		padding: 20px 0px;
+		text-align: center;
+		white-space: nowrap;
+		text-decoration: none;
+		border: 1px solid $white;
+		border-radius: 16px;
+	}
+}
+
+.banner-animation {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	height: 180px;
+	overflow: hidden;
+
+	.deco-grass1 {
+		position: absolute;
+		right: 360px;
+		animation: 3s infinite upward1 ease-out;
+	}
+
+	.deco-grass2 {
+		position: absolute;
+		right: 180px;
+		animation: 3s infinite upward2 ease-out;
+	}
+
+	.deco-grass3 {
+		position: absolute;
+		right: 0px;
+		animation: 3s infinite upward3 ease-out;
+	}
+}
+
+@keyframes upward1 {
+	0% {
+		bottom: -180px;
+	}
+	30% {
+		bottom: -180px;
+	}
+	50% {
+		bottom: 0;
+	}
+	80% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 180px;
+	}
+}
+
+@keyframes upward2 {
+	0% {
+		bottom: -180px;
+	}
+	20% {
+		bottom: -180px;
+	}
+	48% {
+		bottom: 0;
+	}
+	78% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 180px;
+	}
+}
+
+@keyframes upward3 {
+	0% {
+		bottom: -180px;
+	}
+	20% {
+		bottom: -180px;
+	}
+	40% {
+		bottom: 0;
+	}
+	68% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 180px;
+	}
+}
+
+@media (max-width: 380px) {
+	.container {
+		padding: 12px;
+	}
+
+	.main-intro {
+		@include font($fz-h1, $lh-h1);
+	}
+	.callToAction {
+		margin-bottom: 180px;
+	}
+	.banner-animation {
+		justify-content: center;
+		img {
+			max-width: 117px;
+		}
+
+		.deco-grass1 {
+			right: 234px;
+		}
+
+		.deco-grass2 {
+			right: 117px;
+		}
+	}
+}

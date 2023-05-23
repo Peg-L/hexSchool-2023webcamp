@@ -1,0 +1,45 @@
+// Font
+// 字體大小變數
+$fz-display1: 10rem;
+$fz-display2: 7.5rem;
+$fz-display3: 5rem;
+$fz-h1: 3rem;
+$fz-h2: 2.5rem;
+$fz-h3: 2rem;
+$fz-h4: 1.75rem;
+$fz-h5: 1.5rem;
+$fz-h6: 1.25rem;
+$fz-body: 1rem;
+$fz-small: 0.875rem;
+$fz-tiny: 0.75rem;
+
+// 行高變數
+$lh-normal: 1.2;
+$lh-tall: 1.5;
+
+$lh-display1: $lh-normal;
+$lh-display2: $lh-normal;
+$lh-display3: $lh-normal;
+$lh-h1: $lh-normal;
+$lh-h2: $lh-normal;
+$lh-h3: $lh-normal;
+$lh-h4: $lh-normal;
+$lh-h5: $lh-normal;
+$lh-h6: $lh-normal;
+$lh-body: $lh-tall;
+$lh-small: $lh-tall;
+$lh-tiny: $lh-tall;
+
+// 字體樣式 mixin
+@mixin font($font-size, $line-height) {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+// 顏色
+$black-100: #020202;
+$black-80: #525252;
+$black-60: #919191;
+$black-40: #d1d1d1;
+$black-20: #f2f2f2;
+$white: #ffffff;
