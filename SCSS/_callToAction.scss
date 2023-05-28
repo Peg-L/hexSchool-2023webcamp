@@ -1,0 +1,32 @@
+.cta {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 160px 0;
+
+	h2 {
+		@include font($fz-h1, $lh-h1);
+		font-weight: 900;
+		margin-bottom: 40px;
+	}
+}
+
+.cta-button {
+	position: relative;
+
+	a {
+		display: block;
+		padding: 20px 68px 20px 40px;
+		@include font($fz-h6, $lh-h6);
+		font-weight: 900;
+		border: 1px solid $black-20;
+		border-radius: 16px;
+	}
+
+	.material-symbols-outlined {
+		margin-left: 16px;
+		font-size: 15px;
+		position: absolute;
+		top: 25.5px;
+	}
+}

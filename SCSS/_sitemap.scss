@@ -1,0 +1,22 @@
+.sitemap {
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 0;
+	border-top: 1px solid $black-60;
+	border-bottom: 1px solid $black-60;
+}
+
+.sitemap-list {
+	ul {
+		gap: 8px;
+	}
+
+	a {
+		@include font($fz-display3, $lh-display3);
+		font-weight: 900;
+	}
+}
+
+.sitemap-logo {
+	width: 245px;
+}

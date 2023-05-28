@@ -1,0 +1,28 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	border-bottom: 1px solid $black-60;
+	margin-bottom: 40px;
+}
+
+.logo h1 a {
+	display: block;
+	width: 245px;
+	height: 40px;
+	background-image: url("/images/logo.png");
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: flex-end;
+	li {
+		margin-left: 20px;
+		@include font($fz-body, $lh-body);
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,20 @@
+.backToTopBtn {
+	position: fixed;
+	bottom: 20px;
+	margin-left: 1120px;
+	z-index: 999;
+	padding: 20px 40px;
+	border: none;
+	border-radius: 16px;
+	background-color: $black-100;
+	color: $white;
+	cursor: pointer;
+}
+
+.backToTopBtn:hover {
+	background-color: $black-80;
+}
+
+.material-symbols-outlined {
+	margin-left: 12px;
+}

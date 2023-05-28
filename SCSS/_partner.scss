@@ -1,0 +1,38 @@
+.partner {
+	margin-bottom: 160px;
+	.partner-title {
+		@include font($fz-h3, $lh-h3);
+		font-weight: 900;
+		margin-bottom: 80px;
+	}
+
+	.partner-list ul {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		gap: 24px;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 196px;
+			height: 40px;
+		}
+
+		&::before {
+			left: 0;
+			background-image: linear-gradient(to left, transparent, black);
+		}
+
+		&::after {
+			right: 0;
+			background-image: linear-gradient(to right, transparent, black);
+		}
+
+		img {
+			width: 160px;
+			height: 40px;
+		}
+	}
+}
