@@ -104,19 +104,19 @@
 	}
 }
 
-@media (max-width: 380px) {
-	.container {
-		padding: 12px;
-	}
-
+@media (max-width: 375px) {
 	.main-intro {
 		@include font($fz-h1, $lh-h1);
 	}
+
 	.callToAction {
 		margin-bottom: 180px;
 	}
+
 	.banner-animation {
 		justify-content: center;
+		margin-bottom: 120px;
+
 		img {
 			max-width: 117px;
 		}

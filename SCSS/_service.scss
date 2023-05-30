@@ -1,27 +1,30 @@
+.service {
+	margin-bottom: 160px;
+}
+
 .service-intro {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 80px;
+}
 
-	.service-title {
-		width: calc(100% / 3);
-		margin-right: 24px;
-		@include font($fz-h3, $lh-h3);
-		font-weight: 900;
-	}
+.service-title {
+	width: calc(100% / 3);
+	margin-right: 24px;
+	@include font($fz-h3, $lh-h3);
+	font-weight: 900;
+}
 
-	.service-desc {
-		width: calc((100% / 3) * 2);
-		@include font($fz-h1, $lh-h1);
-		font-weight: 900;
-	}
+.service-desc {
+	width: calc((100% / 3) * 2);
+	@include font($fz-h1, $lh-h1);
+	font-weight: 900;
 }
 
 .service-cards {
 	display: flex;
 	justify-content: space-between;
 	gap: 24px;
-	margin-bottom: 160px;
 }
 
 .service-card {
@@ -40,5 +43,37 @@
 	}
 	p {
 		@include font($fz-body, $lh-body);
+	}
+}
+
+@media (max-width: 375px) {
+	.service {
+		margin-bottom: 120px;
+	}
+
+	.service-intro {
+		flex-direction: column;
+		margin-bottom: 48px;
+	}
+
+	.service-title h2 {
+		@include font($fz-h6, $lh-h6);
+		margin-bottom: 24px;
+	}
+
+	.service-desc {
+		@include font($fz-h3, $lh-h3);
+		width: 100%;
+		// text-align: justify;
+	}
+
+	.service-cards {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.service-card {
+		width: 100%;
+		padding: 40px 20px;
 	}
 }

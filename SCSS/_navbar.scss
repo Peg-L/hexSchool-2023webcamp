@@ -17,12 +17,102 @@
 	overflow: hidden;
 }
 
-.menu ul {
+.menu-list {
 	display: flex;
 	justify-content: flex-end;
+
 	li {
 		margin-left: 20px;
 		@include font($fz-body, $lh-body);
 		font-weight: 700;
+	}
+}
+
+.menu-button-container {
+	display: none;
+	width: 24px;
+	cursor: pointer;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+	display: block;
+	background-color: $white;
+	position: absolute;
+	height: 2px;
+	width: 26px;
+	transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	border-radius: 2px;
+}
+
+.menu-button::before {
+	content: "";
+	margin-top: -8px;
+}
+
+.menu-button::after {
+	content: "";
+	margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+	margin-top: 0px;
+	transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+	background: $black-100;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+	margin-top: 0px;
+	transform: rotate(-405deg);
+}
+
+// RWD
+@media (max-width: 375px) {
+	.logo h1 a {
+		width: 147px;
+		height: 24px;
+		background-image: url("/images/logo-sm.png");
+	}
+
+	#menu-toggle {
+		position: absolute;
+		right: 28px;
+	}
+
+	.menu-button-container {
+		display: flex;
+	}
+
+	#menu-toggle ~ .menu-list {
+		display: none;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		z-index: 1;
+		position: absolute;
+		top: 80px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $black-100;
+
+		li {
+			@include font($fz-display3, $lh-display3);
+			margin: 0;
+		}
+	}
+
+	#menu-toggle:checked ~ .menu-list {
+		display: flex;
 	}
 }

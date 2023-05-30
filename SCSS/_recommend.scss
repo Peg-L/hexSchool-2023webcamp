@@ -19,10 +19,10 @@
 	display: flex;
 	gap: 4px;
 	margin-bottom: 20px;
-}
 
-.material-symbols-outlined {
-	font-size: 14px;
+	.material-symbols-outlined {
+		font-size: 14px;
+	}
 }
 
 .recommend-content {
@@ -57,7 +57,7 @@
 }
 
 // RWD
-@media (max-width: 376px) {
+@media (max-width: 375px) {
 	.controls {
 		position: relative;
 		text-align: center;

@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 
+.container {
+	max-width: 1296px;
+}
+
 body {
 	font-family: "Noto Sans TC", sans-serif;
 	background-color: $black-100;
 	color: $white;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
 	.container {
-		padding: 12px;
+		padding: 0 12px;
 	}
 }

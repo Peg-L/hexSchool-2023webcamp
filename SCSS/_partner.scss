@@ -1,38 +1,81 @@
+// https://codepen.io/klfjrlod-the-sasster/pen/NWOEQvo
+
 .partner {
 	margin-bottom: 160px;
-	.partner-title {
-		@include font($fz-h3, $lh-h3);
-		font-weight: 900;
-		margin-bottom: 80px;
-	}
+}
 
-	.partner-list ul {
+.partner-title {
+	@include font($fz-h3, $lh-h3);
+	font-weight: 900;
+	margin-bottom: 80px;
+}
+
+.partner-list {
+	overflow: hidden;
+	position: relative;
+
+	ul {
 		display: flex;
 		justify-content: center;
-		position: relative;
 		gap: 24px;
+	}
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 196px;
+		height: 40px;
+		top: 0;
+		z-index: 2;
+	}
 
+	&::before {
+		left: 0;
+		background-image: linear-gradient(to left, transparent, black);
+	}
+
+	&::after {
+		right: 0;
+		background-image: linear-gradient(to right, transparent, black);
+	}
+
+	img {
+		max-width: 160px;
+	}
+}
+
+.parnter-list1 {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 375px) {
+	.partner-title {
+		@include font($fz-h6, $lh-h6);
+		margin-bottom: 24px;
+	}
+
+	.partner-list {
 		&::before,
 		&::after {
-			content: "";
-			position: absolute;
-			width: 196px;
-			height: 40px;
+			width: 82px;
 		}
 
-		&::before {
-			left: 0;
-			background-image: linear-gradient(to left, transparent, black);
-		}
+		ul {
+			gap: 20px;
 
-		&::after {
-			right: 0;
-			background-image: linear-gradient(to right, transparent, black);
+			li:nth-child(n + 4) {
+				display: none;
+			}
 		}
+	}
 
-		img {
-			width: 160px;
-			height: 40px;
+	.parnter-list1 {
+		margin-bottom: 12px;
+	}
+
+	.parnter-list2 {
+		ul {
+			margin-left: -160px;
 		}
 	}
 }
