@@ -181,6 +181,10 @@ body {
   position: relative;
 }
 
+.newline {
+  display: none;
+}
+
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -682,6 +686,7 @@ body {
 }
 
 .search-title {
+  text-align: center;
   font-size: 5rem;
   line-height: 1.2;
   font-weight: 900;
@@ -860,6 +865,29 @@ body {
   font-weight: 700;
 }
 
+@media (max-width: 375px) {
+  .bg-white {
+    border-radius: 20px;
+  }
+  .search-title h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .newline {
+    display: block;
+  }
+  .filter {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .category {
+    order: 3;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    white-space: nowrap;
+    margin-top: 16px;
+  }
+}
 .cta {
   display: flex;
   align-items: center;

@@ -8,6 +8,7 @@
 }
 
 .search-title {
+	text-align: center;
 	@include font($fz-display3, $lh-display3);
 	font-weight: 900;
 	color: $black-100;
@@ -69,6 +70,7 @@
 	@include font($fz-body, $lh-body);
 	color: $black-60;
 	gap: 8px;
+
 	a {
 		display: block;
 		padding: 8px 16px;
@@ -188,5 +190,33 @@
 			font-size: 15px;
 			font-weight: 700;
 		}
+	}
+}
+
+// RWD
+@media (max-width: 375px) {
+	.bg-white {
+		border-radius: 20px;
+	}
+
+	.search-title h2 {
+		@include font($fz-h3, $lh-h3);
+	}
+
+	.newline {
+		display: block;
+	}
+
+	.filter {
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.category {
+		order: 3;
+		overflow-x: scroll;
+		justify-content: flex-start;
+		white-space: nowrap;
+		margin-top: 16px;
 	}
 }
