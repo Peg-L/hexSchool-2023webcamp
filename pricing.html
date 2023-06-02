@@ -14,31 +14,28 @@
 		<div class="container center">
 			<div class="navbar">
 				<div class="logo">
-					<h1><a href="#">AI工具王</a></h1>
+					<h1><a href="index.html">AI工具王</a></h1>
 				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="#">首頁</a></li>
-						<li><a href="#">定價</a></li>
-					</ul>
-					<a href="#"><span class="material-symbols-outlined"> menu </span></a>
-					<a href="#"><span class="material-symbols-outlined"> close </span></a>
-				</div>
+
+				<input type="checkbox" id="menu-toggle" />
+				<label class="menu-button-container" for="menu-toggle">
+					<div class="menu-button"></div>
+				</label>
+				<ul class="menu-list">
+					<li><a href="index.html">首頁</a></li>
+					<li><a href="pricing.html">定價</a></li>
+				</ul>
 			</div>
 
-			<!-- <div class="banner">
+			<div class="banner banner-pricing">
 				<h2 class="main-intro">
-					透過
+					用多少，
 					<br />
-					AI 工具王的
-					<br />
-					強大模型
-					<br />
-					讓您的業務更聰明
+					付多少。
 				</h2>
-				<div class="callToAction">
-					<a href="###">開始使用</a>
-				</div>
+				<p class="introduction">
+					我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
+				</p>
 				<div class="banner-animation">
 					<img class="deco-grass1" src="images/deco.png" alt="decoration" />
 					<img class="deco-grass2" src="images/deco.png" alt="decoration" />
@@ -46,163 +43,105 @@
 				</div>
 			</div>
 
-			<div class="service">
-				<div class="service-intro">
-					<div class="service-title">
-						<h2>我們的服務</h2>
-					</div>
-					<div class="service-desc">
-						<h3>
-							我們相信透過 AI 技術，
-							<br />
-							包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。
-						</h3>
-					</div>
+			<div class="pricing">
+				<div class="pricing-title">
+					<h3>定價</h3>
 				</div>
-				<div class="service-cards">
-					<div class="service-card">
-						<img src="/images/icons/flash on.png" alt="快速" />
-						<h4>快速</h4>
-						<p>
-							我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。
-						</p>
-					</div>
-					<div class="service-card">
-						<img src="/images/icons/auto awesome.png" alt="靈活" />
-						<h4>靈活</h4>
-						<p>
-							我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。
-						</p>
-					</div>
-					<div class="service-card">
-						<img src="/images/icons/library add.png" alt="擴充" />
-						<h4>擴充</h4>
-						<p>我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="partner">
-				<div class="partner-title">
-					<h2>來自合作夥伴</h2>
-				</div>
-				<div class="partner-list mb-20">
-					<ul>
-						<li><img src="/images/enterprise1.png" alt="A 公司" /></li>
-						<li><img src="/images/enterprise2.png" alt="B 公司" /></li>
-						<li><img src="/images/enterprise3.png" alt="C 公司" /></li>
-						<li><img src="/images/enterprise4.png" alt="D 公司" /></li>
-						<li><img src="/images/enterprise5.png" alt="E 公司" /></li>
-						<li><img src="/images/enterprise6.png" alt="F 公司" /></li>
-					</ul>
-				</div>
-				<div class="partner-list">
-					<ul>
-						<li><img src="/images/enterprise7.png" alt="甲公司" /></li>
-						<li><img src="/images/enterprise8.png" alt="乙公司" /></li>
-						<li><img src="/images/enterprise9.png" alt="丙公司" /></li>
-						<li><img src="/images/enterprise10.png" alt="丁公司" /></li>
-						<li><img src="/images/enterprise11.png" alt="戊公司" /></li>
-						<li><img src="/images/enterprise12.png" alt="好公司" /></li>
-						<li><img src="/images/enterprise13.png" alt="壞公司" /></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="recommend-list">
-				<div class="recommend-item active">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
+				<ul class="pricing-cards">
+					<li class="pricing-card">
+						<div class="plan-desc">
+							<h4>琪琪</h4>
+							<ul>
+								<li>初級</li>
+								<li>速度最快</li>
+							</ul>
 						</div>
-						<p class="recommend-comment">
-							非常喜歡 AI工具王 提供的 AI
-							模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王提供的
-							AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="images/users-avatar/user1.png" alt="用戶" />
+						<div class="plan-toolbar">
+							<p class="price">NT$5<span>／1k tokens</span></p>
+							<div class="use">
+								<p>開始使用</p>
+								<span class="material-symbols-outlined"> north_east </span>
+							</div>
 						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">陳雅婷</h3>
-							<p class="company">鑫網科技有限公司</p>
+					</li>
+					<li class="pricing-card">
+						<div class="plan-desc">
+							<h4>昊昊</h4>
+							<ul>
+								<li>中級</li>
+							</ul>
 						</div>
-					</div>
-				</div>
-				<div class="recommend-item">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
+						<div class="plan-toolbar">
+							<p class="price">NT$5<span>／1k tokens</span></p>
+							<div class="use">
+								<p>開始使用</p>
+								<span class="material-symbols-outlined"> north_east </span>
+							</div>
 						</div>
-						<p class="recommend-comment">
-							作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王
-							提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
-							的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
-							AI工具王 團隊的辛勤工作！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="images/users-avatar/user2.png" alt="用戶" />
+					</li>
+					<li class="pricing-card">
+						<div class="plan-desc">
+							<h4>卡卡</h4>
+							<ul>
+								<li>高級</li>
+							</ul>
 						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">劉美娜</h3>
-							<p class="company">康和醫療器材有限公司</p>
+						<div class="plan-toolbar">
+							<p class="price">NT$5<span>／1k tokens</span></p>
+							<div class="use">
+								<p>開始使用</p>
+								<span class="material-symbols-outlined"> north_east </span>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="recommend-item">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
+					</li>
+					<li class="pricing-card">
+						<div class="plan-desc">
+							<h4>杰杰</h4>
+							<ul>
+								<li>最高級</li>
+								<li>資訊最完善</li>
+							</ul>
 						</div>
-						<p class="recommend-comment">
-							我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而
-							AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用
-							AI工具王
-							的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝
-							AI工具王 團隊的支持！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="images/users-avatar/user3.png" alt="用戶" />
+						<div class="plan-toolbar">
+							<p class="price">NT$5<span>／1k tokens</span></p>
+							<div class="use">
+								<p>開始使用</p>
+								<span class="material-symbols-outlined"> north_east </span>
+							</div>
 						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">黃健豪</h3>
-							<p class="company">華盛銀行</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="controls">
-				<ul>
-					<li class="control" data-index="0"></li>
-					<li class="control" data-index="1"></li>
-					<li class="control" data-index="2"></li>
+					</li>
 				</ul>
-			</div> -->
+			</div>
+
+			<div class="user-guide">
+				<div class="user-guide-title">
+					<h3>使用規範</h3>
+				</div>
+				<ul class="user-guide-desc">
+					<li>
+						<h4>守法</h4>
+						<p>請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
+					</li>
+					<li>
+						<h4>資訊安全</h4>
+						<p>請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
+					</li>
+					<li>
+						<h4>守密</h4>
+						<p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 
-		<!-- search area -->
-		<!-- <div class="bg-white search pd160-0">
+		<div class="bg-white search">
 			<div class="container center">
 				<div class="search-title">
-					<h2>這些超酷的應用，都來自 AI工具王</h2>
+					<h2>
+						這些超酷的應用，
+						<div class="newline"></div>
+						都來自 AI工具王
+					</h2>
 				</div>
 				<div class="search-input">
 					<input
@@ -248,7 +187,7 @@
 								alt="Chatbot Builder" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Chatbot Builder</h3>
+							<h3 class="card-title mb-12"><a href="#">Chatbot Builder</a></h3>
 							<p>
 								建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。
 							</p>
@@ -271,7 +210,9 @@
 								alt="Image Recognition Platform" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Image Recognition Platform</h3>
+							<h3 class="card-title mb-12">
+								<a href="#">Image Recognition Platform</a>
+							</h3>
 							<p>專業的圖像識別平台，識別圖像、分類、標記等。</p>
 						</div>
 						<div class="tools-ai card-border-bottom flex jcsb card-pd">
@@ -292,7 +233,9 @@
 								alt="Language Translation API" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Language Translation API</h3>
+							<h3 class="card-title mb-12">
+								<a href="#">Language Translation API</a>
+							</h3>
 							<p>專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。</p>
 						</div>
 						<div class="tools-ai card-border-bottom flex jcsb card-pd">
@@ -313,7 +256,9 @@
 								alt="Sentiment Analysis API" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Sentiment Analysis API</h3>
+							<h3 class="card-title mb-12">
+								<a href="#">Sentiment Analysis API</a>
+							</h3>
 							<p>
 								自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。
 							</p>
@@ -336,7 +281,9 @@
 								alt="Fraud Detection Platform" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Fraud Detection Platform</h3>
+							<h3 class="card-title mb-12">
+								<a href="#">Fraud Detection Platform</a>
+							</h3>
 							<p>預防詐騙活動，適用於銀行、金融、電商等。</p>
 						</div>
 						<div class="tools-ai card-border-bottom flex jcsb card-pd">
@@ -357,7 +304,9 @@
 								alt="Voice Assistant SDK" />
 						</div>
 						<div class="description card-border-bottom card-pd">
-							<h3 class="card-title mb-12">Voice Assistant SDK</h3>
+							<h3 class="card-title mb-12">
+								<a href="#">Voice Assistant SDK</a>
+							</h3>
 							<p>
 								通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。
 							</p>
@@ -392,23 +341,65 @@
 					</ul>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="container center por">
-			<div class="cta">
-				<h2>現在就來建立屬於你的服務吧</h2>
-				<div class="cta-button">
-					<a href="#"
-						>開始使用<span class="material-symbols-outlined">north_east</span>
-					</a>
+		<div class="container center por">
+			<div class="faq">
+				<div class="faq-title">
+					<h3>常見問題</h3>
 				</div>
+				<ul class="faq-content">
+					<li>
+						<div class="button"></div>
+						<div class="faq-qa">
+							<h4>如何選擇適合的AI模型？</h4>
+							<p>
+								您可以透過關鍵字搜尋或是標籤分類來查找AI模型，請點進AI模型頁面，每個頁面都附上詳細說明、模型特點以及使用限制。
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="button"></div>
+						<div class="faq-qa">
+							<h4>租用模型的費用是如何計算的？</h4>
+							<p>
+								我們有四種方案，收費標準皆不同，方案的收費資訊請查看定價頁面。
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="button"></div>
+						<div class="faq-qa">
+							<h4>如何進行付款？</h4>
+							<p>建議綁定信用卡，系統依照您選擇的方案自動扣繳。</p>
+						</div>
+					</li>
+					<li>
+						<div class="button"></div>
+						<div class="faq-qa">
+							<h4>租用模型的期限是多久？</h4>
+							<p>
+								模型的租用期限分為一個月、一季、半年、一年，可在訂購時選擇租用期限。
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="button"></div>
+						<div class="faq-qa">
+							<h4>如果在使用過程中遇到問題，應該怎麼處理？</h4>
+							<p>
+								使用過程中遇到的問題，可以查看「常見問答」、「官方論壇」或是透過「線上文字客服」來解決。
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
 
 			<div class="sitemap">
 				<div class="sitemap-list">
 					<ul>
-						<li><a href="#">首頁</a></li>
-						<li><a href="#">定價</a></li>
+						<li><a href="index.html">首頁</a></li>
+						<li><a href="pricing.html">定價</a></li>
 					</ul>
 				</div>
 				<div class="sitemap-logo">
@@ -422,87 +413,17 @@
 				</div>
 				<div class="social">
 					<ul>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Instagram</a></li>
+						<li><a href="###">Facebook</a></li>
+						<li><a href="###">Twitter</a></li>
+						<li><a href="###">Instagram</a></li>
 					</ul>
 				</div>
 			</div>
 
 			<button class="backToTopBtn">
-				Back to Top<span class="material-symbols-outlined"> arrow_upward </span>
+				<span class="material-symbols-outlined"> arrow_upward </span>
 			</button>
-		</div> -->
-		<div class="pricing">
-			<div class="pricing-title">
-				<h3>定價</h3>
-			</div>
-			<ul class="pricing-cards">
-				<li class="pricing-card">
-					<div class="plan-desc">
-						<h4>琪琪</h4>
-						<ul>
-							<li>初級</li>
-							<li>速度最快</li>
-						</ul>
-					</div>
-					<div class="plan-toolbar">
-						<p class="price">NT$5<span>／1k tokens</span></p>
-						<div class="use">
-							<p>開始使用</p>
-							<span class="material-symbols-outlined"> north_east </span>
-						</div>
-					</div>
-				</li>
-				<li class="pricing-card">
-					<div class="plan-desc">
-						<h4>昊昊</h4>
-						<ul>
-							<li>中級</li>
-						</ul>
-					</div>
-					<div class="plan-toolbar">
-						<p class="price">NT$5<span>／1k tokens</span></p>
-						<div class="use">
-							<p>開始使用</p>
-							<span class="material-symbols-outlined"> north_east </span>
-						</div>
-					</div>
-				</li>
-				<li class="pricing-card">
-					<div class="plan-desc">
-						<h4>卡卡</h4>
-						<ul>
-							<li>高級</li>
-						</ul>
-					</div>
-					<div class="plan-toolbar">
-						<p class="price">NT$5<span>／1k tokens</span></p>
-						<div class="use">
-							<p>開始使用</p>
-							<span class="material-symbols-outlined"> north_east </span>
-						</div>
-					</div>
-				</li>
-				<li class="pricing-card">
-					<div class="plan-desc">
-						<h4>杰杰</h4>
-						<ul>
-							<li>最高級</li>
-							<li>資訊最完善</li>
-						</ul>
-					</div>
-					<div class="plan-toolbar">
-						<p class="price">NT$5<span>／1k tokens</span></p>
-						<div class="use">
-							<p>開始使用</p>
-							<span class="material-symbols-outlined"> north_east </span>
-						</div>
-					</div>
-				</li>
-			</ul>
 		</div>
-
 		<script src="js/all.js"></script>
 	</body>
 </html>

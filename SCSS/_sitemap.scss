@@ -20,3 +20,21 @@
 .sitemap-logo {
 	width: 245px;
 }
+
+// RWD
+@media (max-width: 375px) {
+	.sitemap {
+		flex-direction: column;
+	}
+
+	.sitemap-list {
+		a {
+			@include font($fz-h1, $lh-h1);
+		}
+		order: 2;
+	}
+
+	.sitemap-logo {
+		margin-bottom: 40px;
+	}
+}

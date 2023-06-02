@@ -1,19 +1,32 @@
 .footer {
 	display: flex;
 	align-items: center;
-	padding: 32px;
+	padding: 32px 0;
 }
 
 .copyright {
 	margin-right: 100px;
+	padding: 12px 0;
 }
 
 .social {
+	padding: 12px 0;
 	ul {
 		gap: 20px;
 		display: flex;
 	}
 	a {
 		padding: 12px 0;
+	}
+}
+
+@media (max-width: 375px) {
+	.footer {
+		display: block;
+		padding: 20px 0;
+	}
+
+	.copyright {
+		margin-bottom: 12px;
 	}
 }

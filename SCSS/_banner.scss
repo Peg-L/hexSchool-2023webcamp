@@ -10,6 +10,7 @@
 }
 
 .callToAction {
+	margin-bottom: 100px;
 	a {
 		width: 160px;
 		display: block;
@@ -21,90 +22,79 @@
 		text-decoration: none;
 		border: 1px solid $white;
 		border-radius: 16px;
+
+		&:hover {
+			background-color: $white;
+			color: $black-100;
+			font-weight: 700;
+		}
 	}
 }
 
 .banner-animation {
 	display: flex;
 	justify-content: flex-end;
-	position: relative;
-	height: 180px;
 	overflow: hidden;
+	position: relative;
+
+	img {
+		max-width: 180px;
+	}
 
 	.deco-grass1 {
-		position: absolute;
-		right: 360px;
-		animation: 3s infinite upward1 ease-out;
+		animation: 3.5s infinite upward ease-in-out 0.5s;
 	}
 
 	.deco-grass2 {
-		position: absolute;
-		right: 180px;
-		animation: 3s infinite upward2 ease-out;
+		animation: 3.5s infinite upward ease-in-out 0.2s;
 	}
 
 	.deco-grass3 {
-		position: absolute;
-		right: 0px;
-		animation: 3s infinite upward3 ease-out;
+		animation: 3.5s infinite upward ease-in-out;
 	}
 }
 
-@keyframes upward1 {
+@keyframes upward {
 	0% {
-		bottom: -180px;
+		transform: translateY(190px);
 	}
-	30% {
-		bottom: -180px;
-	}
-	50% {
-		bottom: 0;
-	}
-	80% {
-		bottom: 0;
+
+	30%,
+	70% {
+		transform: translateY(-10px);
 	}
 	100% {
-		bottom: 180px;
+		transform: translateY(-190px);
 	}
 }
 
-@keyframes upward2 {
-	0% {
-		bottom: -180px;
-	}
-	20% {
-		bottom: -180px;
-	}
-	48% {
-		bottom: 0;
-	}
-	78% {
-		bottom: 0;
-	}
-	100% {
-		bottom: 180px;
-	}
-}
+// pricing
+.banner-pricing {
+	display: flex;
+	flex-direction: column;
 
-@keyframes upward3 {
-	0% {
-		bottom: -180px;
+	.main-intro {
+		margin-bottom: 80px;
 	}
-	20% {
-		bottom: -180px;
+
+	.introduction {
+		@include font($fz-h1, $lh-h1);
+		font-weight: 900;
+		margin-left: auto;
+		max-width: 636px;
+		margin-bottom: 238px;
 	}
-	40% {
-		bottom: 0;
-	}
-	68% {
-		bottom: 0;
-	}
-	100% {
-		bottom: 180px;
+
+	.banner-animation {
+		margin-right: auto;
 	}
 }
 
 @media (max-width: 375px) {
+	.banner {
+		margin-bottom: 120px;
+	}
+
 	.main-intro {
 		@include font($fz-h1, $lh-h1);
 	}
@@ -115,7 +105,6 @@
 
 	.banner-animation {
 		justify-content: center;
-		margin-bottom: 120px;
 
 		img {
 			max-width: 117px;
@@ -127,6 +116,23 @@
 
 		.deco-grass2 {
 			right: 117px;
+		}
+	}
+
+	// pricing banner RWD
+	.banner-pricing {
+		.main-intro {
+			margin-bottom: 64px;
+		}
+
+		.introduction {
+			@include font($fz-h4, $lh-h4);
+			max-width: 257px;
+			margin-bottom: 258px;
+		}
+
+		.banner-animation {
+			margin-right: 0;
 		}
 	}
 }

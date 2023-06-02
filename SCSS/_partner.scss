@@ -17,7 +17,9 @@
 	ul {
 		display: flex;
 		justify-content: center;
+
 		gap: 24px;
+		animation: partnerAnimation 10s ease-in-out infinite;
 	}
 	&::before,
 	&::after {
@@ -62,10 +64,6 @@
 
 		ul {
 			gap: 20px;
-
-			li:nth-child(n + 4) {
-				display: none;
-			}
 		}
 	}
 
@@ -75,7 +73,16 @@
 
 	.parnter-list2 {
 		ul {
-			margin-left: -160px;
+			margin-left: -25px;
 		}
+	}
+}
+
+@keyframes partnerAnimation {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
 	}
 }

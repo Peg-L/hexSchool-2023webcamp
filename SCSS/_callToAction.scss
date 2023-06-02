@@ -2,7 +2,8 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding: 160px 0;
+	padding-bottom: 80px;
+	margin-bottom: 80px;
 
 	h2 {
 		@include font($fz-h1, $lh-h1);
@@ -13,7 +14,6 @@
 
 .cta-button {
 	position: relative;
-
 	a {
 		display: block;
 		padding: 20px 68px 20px 40px;
@@ -28,5 +28,34 @@
 		font-size: 15px;
 		position: absolute;
 		top: 25.5px;
+	}
+
+	&:hover {
+		a {
+			background-color: $white;
+			color: $black-100;
+			font-weight: 700;
+		}
+
+		.material-symbols-outlined {
+			font-weight: 700;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.cta {
+		padding: 120px 0;
+		margin: 40px 0;
+
+		h2 {
+			@include font($fz-h3, $lh-h3);
+			margin-bottom: 32px;
+			text-align: center;
+		}
+
+		.newline {
+			display: block;
+		}
 	}
 }

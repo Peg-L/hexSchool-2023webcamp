@@ -28,20 +28,20 @@
 .recommend-content {
 	@include font($fz-body, $lh-body);
 	text-align: justify;
-	flex-grow: 1;
 }
 
 .recommend-comment {
 	max-height: 215px;
 	margin-bottom: 20px;
 	color: $black-20;
+	// flex-grow: 1;
 }
 
 .recommend-user {
 	display: flex;
 	align-items: center;
 	.avatar {
-		width: 48px;
+		max-width: 48px;
 		margin-right: 16px;
 	}
 	&-desc {

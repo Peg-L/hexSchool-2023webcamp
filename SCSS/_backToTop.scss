@@ -1,0 +1,36 @@
+.backToTopBtn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	padding: 8px 8px 6px 8px;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 2px 2px 8px 1px rgba($white, 0.3);
+
+	color: $white;
+	text-align: center;
+	background-color: $black-100;
+	cursor: pointer;
+
+	.material-symbols-outlined {
+		font-size: 16px;
+	}
+
+	&:hover {
+		.backToTopBtn {
+			padding: 10px 10px 8px 10px;
+		}
+
+		.material-symbols-outlined {
+			font-size: 18px;
+		}
+	}
+}
+
+// RWD
+@media (max-width: 375px) {
+	.backToTopBtn {
+		padding: 8px;
+		font-size: 8px;
+	}
+}

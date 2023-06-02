@@ -1,10 +1,12 @@
 .bg-white {
 	background-color: $white;
 	border-radius: 160px;
+	margin-bottom: 160px;
 }
 
 .search {
 	color: $black-100;
+	padding: 160px 0;
 }
 
 .search-title {
@@ -105,6 +107,9 @@
 .card-title {
 	@include font($fz-h6, $lh-h6);
 	font-weight: 900;
+	&:hover {
+		color: $black-80;
+	}
 }
 
 .card-font-body {
@@ -139,6 +144,7 @@
 				}
 			}
 		}
+
 		.description {
 			flex-grow: 1;
 			p {
@@ -199,8 +205,18 @@
 		border-radius: 20px;
 	}
 
-	.search-title h2 {
-		@include font($fz-h3, $lh-h3);
+	.search {
+		padding: 80px 0;
+	}
+
+	.search-title {
+		margin-bottom: 32px;
+		h2 {
+			@include font($fz-h3, $lh-h3);
+		}
+	}
+	.search-input {
+		margin-bottom: 16px;
 	}
 
 	.newline {
@@ -218,5 +234,9 @@
 		justify-content: flex-start;
 		white-space: nowrap;
 		margin-top: 16px;
+	}
+
+	.card-group {
+		gap: 12px;
 	}
 }

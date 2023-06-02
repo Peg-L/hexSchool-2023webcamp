@@ -1,0 +1,56 @@
+.user-guide {
+	display: flex;
+	margin-bottom: 160px;
+}
+
+.user-guide-title {
+	@include font($fz-h3, $lh-h3);
+	font-weight: 900;
+	margin-right: 312px;
+}
+
+.user-guide-desc {
+	li {
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid $black-80;
+	}
+
+	h4 {
+		@include font($fz-h1, $lh-h1);
+		font-weight: 900;
+		margin-bottom: 24px;
+	}
+
+	p {
+		@include font($fz-h3, $lh-h3);
+	}
+}
+
+// RWD
+@media (max-width: 375px) {
+	.user-guide {
+		flex-direction: column;
+		margin-bottom: 120px;
+	}
+
+	.user-guide-title {
+		@include font($fz-h6, $lh-h6);
+		margin-right: 0px;
+		margin-bottom: 48px;
+	}
+
+	.user-guide-desc {
+		li {
+			margin-bottom: 24px;
+		}
+
+		h4 {
+			@include font($fz-h3, $lh-h3);
+		}
+
+		p {
+			@include font($fz-body, $lh-body);
+		}
+	}
+}

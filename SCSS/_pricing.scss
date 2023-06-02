@@ -1,6 +1,8 @@
 .pricing {
 	max-width: 1295px;
 	margin: 0 auto;
+	margin-bottom: 160px;
+
 	.pricing-title {
 		h3 {
 			@include font($fz-h3, $lh-h3);
@@ -14,7 +16,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 1296px;
-	margin-bottom: 160px;
 	gap: 24px;
 
 	.pricing-card {
@@ -76,10 +77,36 @@
 					@include font($fz-body, $lh-body);
 					font-weight: 700;
 				}
-				span {
-					width: 10px;
-					padding: 14.67px;
+				.material-symbols-outlined {
+					padding: 3px;
+					margin-left: 12px;
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.pricing {
+		margin-bottom: 120px;
+
+		.pricing-title {
+			h3 {
+				@include font($fz-h6, $lh-h6);
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	.pricing-cards {
+		.pricing-card {
+			width: 100%;
+			.plan-desc {
+				padding: 20px 20px;
+				padding-bottom: 58px;
+			}
+			.plan-toolbar {
+				padding: 20px 20px;
 			}
 		}
 	}
