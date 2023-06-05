@@ -19,11 +19,13 @@
 	gap: 24px;
 
 	.pricing-card {
+		transition: 0.5s ease-in-out;
 		display: flex;
 		flex-direction: column;
 		width: calc((100% - 24px) / 2);
 		border: 1px solid $black-80;
 		border-radius: 16px;
+		cursor: pointer;
 
 		.plan-desc {
 			flex-grow: 1;
@@ -82,6 +84,11 @@
 					margin-left: 12px;
 				}
 			}
+		}
+
+		&:hover {
+			border: 1px solid $black-40;
+			box-shadow: 1px 1px 10px 1px rgba($white, 0.3);
 		}
 	}
 }

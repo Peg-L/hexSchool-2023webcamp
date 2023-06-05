@@ -38,15 +38,18 @@
 	}
 }
 
-.filter {
+// 篩選按鈕
+.function-btns {
 	margin-bottom: 40px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.filter-button {
+.function-btn {
 	position: relative;
+	margin-bottom: 4px;
 	color: $black-100;
+
 	a {
 		display: block;
 		padding: 20px 60px 20px 40px;
@@ -54,6 +57,7 @@
 		border: 1px solid $black-20;
 		border-radius: 16px;
 	}
+
 	span {
 		margin-left: 15px;
 	}
@@ -65,6 +69,100 @@
 	}
 }
 
+.filter-group {
+	display: none;
+	z-index: 3;
+	position: absolute;
+	background-color: $white;
+	width: 240px;
+	padding: 20px 0;
+	border: 1px solid $black-20;
+	border-radius: 16px;
+	box-shadow: 2px 2px 10px 1px rgba($black-40, 0.5);
+	@include font($fz-body, $lh-body);
+
+	h4 {
+		@include font($fz-tiny, $lh-tiny);
+		color: $black-60;
+		font-weight: 700;
+		margin-bottom: 8px;
+		margin-left: 40px;
+	}
+
+	li {
+		position: relative;
+		padding: 4px 32px 4px 40px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: $black-20;
+		}
+
+		.material-symbols-outlined {
+			display: none;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			margin-right: 35px;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+.filter-model {
+	ul {
+		border-bottom: 1px solid $black-20;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.sortByTime {
+	display: none;
+
+	position: absolute;
+	width: 144px;
+	padding: 20px 0;
+	z-index: 3;
+	right: 0;
+
+	background-color: $white;
+	@include font($fz-body, $lh-body);
+	border: 1px solid $black-20;
+	border-radius: 16px;
+	box-shadow: 2px 2px 10px 1px rgba($black-40, 0.5);
+
+	li {
+		position: relative;
+		padding: 4px 32px 4px 40px;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $black-20;
+		}
+	}
+	&.active {
+		display: block;
+	}
+}
+
+// .sortByTime.active {
+// 	display: block;
+// }
+
+// 分類
 .category {
 	display: flex;
 	justify-content: space-between;
@@ -90,6 +188,7 @@
 	font-weight: 700;
 }
 
+// 工具卡片區
 .card-pd {
 	padding: 20px 32px;
 }
@@ -102,8 +201,8 @@
 	border-bottom: 1px solid $black-20;
 }
 
-// font style set
-// card-title
+// card-title font style set
+
 .card-title {
 	@include font($fz-h6, $lh-h6);
 	font-weight: 900;
@@ -207,6 +306,7 @@
 
 	.search {
 		padding: 80px 0;
+		margin-bottom: 0;
 	}
 
 	.search-title {
@@ -228,6 +328,9 @@
 		flex-wrap: wrap;
 	}
 
+	.function-btns {
+		flex-wrap: wrap;
+	}
 	.category {
 		order: 3;
 		overflow-x: scroll;

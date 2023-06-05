@@ -53,12 +53,25 @@
 		}
 
 		.faq-qa {
-			@include font($fz-h6, $lh-h6);
-			font-weight: 900;
+			h4 {
+				@include font($fz-h6, $lh-h6);
+				font-weight: 900;
+			}
 
 			p {
-				font-weight: 400;
+				@include font($fz-body, $lh-body);
 				display: none;
+			}
+		}
+
+		&.active {
+			.faq-qa {
+				h4 {
+					margin-bottom: 16px;
+				}
+				p {
+					display: block;
+				}
 			}
 		}
 	}
@@ -68,7 +81,7 @@
 @media (max-width: 375px) {
 	.faq {
 		flex-direction: column;
-		margin-bottom: 120px;
+		margin: 120px 0;
 	}
 
 	.faq-title {

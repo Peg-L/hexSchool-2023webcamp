@@ -1,4 +1,4 @@
-// Master DOManipulator v2 ------------------------------------------------------------
+// 手機版: recommend slider
 const items = document.querySelectorAll(".recommend-item");
 const controls = document.querySelectorAll(".control");
 const activeDelay = 0.76;
@@ -51,3 +51,30 @@ const slider = {
 
 let intervalF = setInterval(slider.nextSlide, interval);
 slider.init();
+
+// 搜尋工具區按鈕
+// --- 篩選按鈕
+const dropDownBtns = document.querySelectorAll(".dropdown");
+const filterGroups = document.querySelectorAll(".filter-group");
+
+dropDownBtns.forEach((button, index) => {
+	button.addEventListener("click", function (event) {
+		event.preventDefault();
+		console.log(button);
+		filterGroups[index].classList.toggle("active");
+	});
+});
+
+// --- 時間排序
+const sortByTimeBtn = document.querySelector(".sortByTimeBtn");
+const sortByTime = document.querySelector(".sortByTime");
+
+sortByTimeBtn.addEventListener("click", function (event) {
+	event.preventDefault();
+	sortByTime.classList.toggle("active");
+});
+
+// BackToTop 按鈕
+$(".backToTopBtn").click(function () {
+	$("html").animate({ scrollTop: 0 }, 1000);
+});
