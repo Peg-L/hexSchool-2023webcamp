@@ -11,7 +11,7 @@
 	display: block;
 	width: 245px;
 	height: 40px;
-	background-image: url("/images/logo.png");
+	background-image: url("./images/logo.png");
 	text-indent: 101%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -86,7 +86,7 @@
 	.logo h1 a {
 		width: 147px;
 		height: 24px;
-		background-image: url("/images/logo-sm.png");
+		background-image: url("./images/logo-sm.png");
 	}
 
 	#menu-toggle {
