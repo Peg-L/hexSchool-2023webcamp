@@ -114,6 +114,8 @@ function renderWorks() {
 	let works = "";
 
 	worksData.forEach((item) => {
+		console.log(item);
+
 		works += `<li class="card card-border">
 		<div class="card-img">
 			<img
@@ -122,7 +124,7 @@ function renderWorks() {
 		</div>
 		<div class="description card-border-bottom card-pd">
 			<h3 class="card-title mb-12">
-				<a href="#">${item.title}</a>
+				<a href="${item.link}" target="_blank">${item.title}</a>
 			</h3>
 			<p>${item.description}</p>
 		</div>
@@ -132,7 +134,7 @@ function renderWorks() {
 		</div>
 		<div class="tools-tag flex jcsb card-pd">
 			<h4 class="card-font-body">${item.type}</h4>
-			<a href="${item.link}"
+			<a href="###"
 				><span class="material-symbols-outlined"> share </span></a
 			>
 		</div>
