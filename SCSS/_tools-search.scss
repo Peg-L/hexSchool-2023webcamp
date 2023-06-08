@@ -20,6 +20,7 @@
 .search-input {
 	position: relative;
 	margin-bottom: 24px;
+
 	input {
 		width: 100%;
 		background-color: $black-20;
@@ -56,6 +57,12 @@
 		@include font($fz-body, $lh-body);
 		border: 1px solid $black-20;
 		border-radius: 16px;
+		transition: box-shadow 0.2s ease-in-out;
+
+		&:hover {
+			// border: 1px solid $black-60;
+			box-shadow: 2px 2px 10px rgba($black-40, 0.3);
+		}
 	}
 
 	span {
@@ -221,20 +228,22 @@
 }
 
 .card-group {
-	justify-content: center;
 	flex-wrap: wrap;
 	margin-bottom: 40px;
+	justify-content: center;
 
 	.card {
 		display: flex;
 		flex-direction: column;
+		width: 406px;
 
-		width: 416px;
 		overflow: hidden;
 		border-radius: 16px;
+
 		.card-img {
 			overflow: hidden;
 			font-size: 0;
+
 			img {
 				transition: transform 0.4s;
 				&:hover {
@@ -268,6 +277,7 @@
 	justify-content: flex-end;
 	@include font($fz-small, $lh-small);
 	gap: 4px;
+
 	li {
 		width: 48px;
 		height: 48px;
@@ -298,8 +308,14 @@
 	}
 }
 
+.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	color: rgba($black-40, 0.7);
+}
+
 // RWD
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.bg-white {
 		border-radius: 20px;
 	}
@@ -331,12 +347,17 @@
 	.function-btns {
 		flex-wrap: wrap;
 	}
+
 	.category {
 		order: 3;
 		overflow-x: scroll;
 		justify-content: flex-start;
 		white-space: nowrap;
 		margin-top: 16px;
+
+		&::-webkit-scrollbar {
+			display: none; // 隱藏滾動軸
+		}
 	}
 
 	.card-group {

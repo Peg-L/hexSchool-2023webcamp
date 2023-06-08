@@ -86,7 +86,7 @@
 }
 
 // RWD
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.partner-title {
 		@include font($fz-h6, $lh-h6);
 		margin-bottom: 24px;

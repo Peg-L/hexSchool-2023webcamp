@@ -11,16 +11,18 @@
 
 .social {
 	padding: 12px 0;
-	ul {
-		gap: 20px;
-		display: flex;
-	}
+	gap: 20px;
+	display: flex;
+
 	a {
 		padding: 12px 0;
+		&:hover {
+			color: $black-40;
+		}
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.footer {
 		display: block;
 		padding: 20px 0;

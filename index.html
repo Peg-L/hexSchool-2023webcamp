@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="container center">
-			<div class="navbar">
+			<nav class="navbar">
 				<div class="logo">
 					<h1><a href="index.html">AI工具王</a></h1>
 				</div>
@@ -28,7 +28,7 @@
 					<li><a href="index.html">首頁</a></li>
 					<li><a href="pricing.html">定價</a></li>
 				</ul>
-			</div>
+			</nav>
 
 			<div class="banner">
 				<h2 class="main-intro">
@@ -44,9 +44,18 @@
 					<a href="###">開始使用</a>
 				</div>
 				<div class="banner-animation">
-					<img class="deco-grass1" src="./images/deco.png" alt="decoration" />
-					<img class="deco-grass2" src="./images/deco.png" alt="decoration" />
-					<img class="deco-grass3" src="./images/deco.png" alt="decoration" />
+					<img
+						class="deco-grass-left"
+						src="./images/deco.png"
+						alt="decoration" />
+					<img
+						class="deco-grass-middle"
+						src="./images/deco.png"
+						alt="decoration" />
+					<img
+						class="deco-grass-right"
+						src="./images/deco.png"
+						alt="decoration" />
 				</div>
 			</div>
 
@@ -63,27 +72,27 @@
 						</h3>
 					</div>
 				</div>
-				<div class="service-cards">
-					<div class="service-card">
+				<ul class="service-cards">
+					<li class="service-card">
 						<img src="./images/icons/flash on.png" alt="快速" />
 						<h4>快速</h4>
 						<p>
 							我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。
 						</p>
-					</div>
-					<div class="service-card">
+					</li>
+					<li class="service-card">
 						<img src="./images/icons/auto awesome.png" alt="靈活" />
 						<h4>靈活</h4>
 						<p>
 							我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。
 						</p>
-					</div>
-					<div class="service-card">
+					</li>
+					<li class="service-card">
 						<img src="./images/icons/library add.png" alt="擴充" />
 						<h4>擴充</h4>
 						<p>我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</p>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</div>
 
 			<div class="partner">
@@ -140,8 +149,8 @@
 				</div>
 			</div>
 
-			<div class="recommend-list">
-				<div class="recommend-item active">
+			<ul class="recommend-list">
+				<li class="recommend-item active">
 					<div class="recommend-content">
 						<div class="stars">
 							<span class="material-symbols-outlined"> star </span>
@@ -165,8 +174,8 @@
 							<p class="company">鑫網科技有限公司</p>
 						</div>
 					</div>
-				</div>
-				<div class="recommend-item">
+				</li>
+				<li class="recommend-item">
 					<div class="recommend-content">
 						<div class="stars">
 							<span class="material-symbols-outlined"> star </span>
@@ -191,8 +200,8 @@
 							<p class="company">康和醫療器材有限公司</p>
 						</div>
 					</div>
-				</div>
-				<div class="recommend-item">
+				</li>
+				<li class="recommend-item">
 					<div class="recommend-content">
 						<div class="stars">
 							<span class="material-symbols-outlined"> star </span>
@@ -218,8 +227,8 @@
 							<p class="company">華盛銀行</p>
 						</div>
 					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
 			<div class="controls">
 				<ul>
 					<li class="control" data-index="0"></li>
@@ -488,7 +497,7 @@
 				<div class="pagination">
 					<ul>
 						<li>
-							<a href="###"
+							<a href="#" class="prePage"
 								><span class="material-symbols-outlined">
 									keyboard_arrow_left
 								</span></a
@@ -524,29 +533,29 @@
 			</div>
 
 			<div class="sitemap">
-				<div class="sitemap-list">
-					<ul>
-						<li><a href="index.html">首頁</a></li>
-						<li><a href="pricing.html">定價</a></li>
-					</ul>
-				</div>
+				<ul class="sitemap-list">
+					<li>
+						<a href="index.html">首頁</a>
+					</li>
+					<li>
+						<a href="pricing.html">定價</a>
+					</li>
+				</ul>
 				<div class="sitemap-logo">
 					<img src="./images/logo.png" alt="AI工具王 logo" />
 				</div>
 			</div>
 
-			<div class="footer">
+			<footer class="footer">
 				<div class="copyright">
 					<p>AI工具王 © 2023</p>
 				</div>
-				<div class="social">
-					<ul>
-						<li><a href="###">Facebook</a></li>
-						<li><a href="###">Twitter</a></li>
-						<li><a href="###">Instagram</a></li>
-					</ul>
-				</div>
-			</div>
+				<ul class="social">
+					<li><a href="###">Facebook</a></li>
+					<li><a href="###">Twitter</a></li>
+					<li><a href="###">Instagram</a></li>
+				</ul>
+			</footer>
 
 			<button class="backToTopBtn">
 				<span class="material-symbols-outlined"> arrow_upward </span>

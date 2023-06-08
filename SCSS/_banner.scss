@@ -41,15 +41,15 @@
 		max-width: 180px;
 	}
 
-	.deco-grass1 {
+	.deco-grass-left {
 		animation: 3.5s infinite upward ease-in-out 0.5s;
 	}
 
-	.deco-grass2 {
+	.deco-grass-middle {
 		animation: 3.5s infinite upward ease-in-out 0.2s;
 	}
 
-	.deco-grass3 {
+	.deco-grass-right {
 		animation: 3.5s infinite upward ease-in-out;
 	}
 }
@@ -90,7 +90,7 @@
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.banner {
 		margin-bottom: 120px;
 	}
@@ -110,11 +110,11 @@
 			max-width: 117px;
 		}
 
-		.deco-grass1 {
+		.deco-grass-left {
 			right: 234px;
 		}
 
-		.deco-grass2 {
+		.deco-grass-middle {
 			right: 117px;
 		}
 	}

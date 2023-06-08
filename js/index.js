@@ -60,7 +60,6 @@ const filterGroups = document.querySelectorAll(".filter-group");
 dropDownBtns.forEach((button, index) => {
 	button.addEventListener("click", function (event) {
 		event.preventDefault();
-		console.log(button);
 		filterGroups[index].classList.toggle("active");
 	});
 });
@@ -75,6 +74,22 @@ sortByTimeBtn.addEventListener("click", function (event) {
 });
 
 // BackToTop 按鈕
+// 偵測滾動才顯示
+const backToTopBtn = document.querySelector(".backToTopBtn");
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		backToTopBtn.style.display = "block";
+	} else {
+		backToTopBtn.style.display = "none";
+	}
+}
+
+// 點擊後跳轉到最上面
 $(".backToTopBtn").click(function () {
 	$("html").animate({ scrollTop: 0 }, 1000);
 });
@@ -91,6 +106,7 @@ const data = {
 	page: 1,
 	search: "",
 };
+
 const cardGroup = document.querySelector(".card-group");
 const pagination = document.querySelector(".pagination > ul");
 
@@ -103,7 +119,7 @@ function getData({ type, sort, page, search }) {
 		pagesData = res.data.ai_works.page;
 
 		renderWorks();
-		renderPages();
+		renderPages(pagesData);
 	});
 }
 
@@ -114,8 +130,6 @@ function renderWorks() {
 	let works = "";
 
 	worksData.forEach((item) => {
-		console.log(item);
-
 		works += `<li class="card card-border">
 		<div class="card-img">
 			<img
@@ -144,6 +158,8 @@ function renderWorks() {
 }
 
 // 切換分頁
+const searches = document.querySelectorAll(".search");
+
 function changePage() {
 	const pageLinks = document.querySelectorAll("a.page-link");
 	let pageId = "";
@@ -154,10 +170,18 @@ function changePage() {
 			pageId = e.target.dataset.page;
 			data.page = Number(pageId);
 			getData(data);
+
+			// 滑到搜尋區最上方
+			searches.forEach((search) => {
+				console.log(search);
+
+				search.scrollIntoView({ behavior: "smooth" });
+			});
 		});
 	});
 }
 
+// 上一頁
 function prePage(pagesData) {
 	const prePage = document.querySelector(".prePage");
 
@@ -165,9 +189,17 @@ function prePage(pagesData) {
 		e.preventDefault();
 		data.page = Number(pagesData.current_page) - 1;
 		getData(data);
+
+		// 滑到搜尋區最上方
+		searches.forEach((search) => {
+			console.log(search);
+
+			search.scrollIntoView({ behavior: "smooth" });
+		});
 	});
 }
 
+// 下一頁
 function nextPage(pagesData) {
 	const nextPage = document.querySelector(".nextPage");
 
@@ -175,20 +207,30 @@ function nextPage(pagesData) {
 		e.preventDefault();
 		data.page = Number(pagesData.current_page) + 1;
 		getData(data);
+
+		// 滑到搜尋區最上方
+		searches.forEach((search) => {
+			console.log(search);
+
+			search.scrollIntoView({ behavior: "smooth" });
+		});
 	});
 }
 
 // 分頁選染至畫面
-function renderPages() {
+function renderPages(pagesData) {
 	let pageStr = "";
+	console.log(pagesData.has_pre);
+	console.log(pagesData.has_next);
 
-	if (pagesData.has_pre) {
-		pageStr += `<li>
-		<a href="#" class="prePage"><span class="material-symbols-outlined">
+	pageStr += `
+	<li>
+		<a href="#" class="prePage ${pagesData.has_pre ? "" : "disabled"}">
+			<span class="material-symbols-outlined">
 				keyboard_arrow_left
-			</span></a>
+			</span>
+		</a>
 	</li>`;
-	}
 
 	for (let i = 1; i <= pagesData.total_pages; i += 1) {
 		pageStr += `<li>
@@ -198,13 +240,16 @@ function renderPages() {
 	</li>`;
 	}
 
-	if (pagesData.has_next) {
-		pageStr += `<li>
-		<a href="#" class="nextPage"><span class="material-symbols-outlined">
+	pageStr += `
+	<li>
+		<a href="#" class="nextPage ${pagesData.has_next ? "" : "disabled"}">
+			<span class="material-symbols-outlined">
 				keyboard_arrow_right
-			</span></a>
+			</span>
+		</a>
 	</li>`;
-	}
+
+	console.log(pageStr);
 
 	pagination.innerHTML = pageStr;
 

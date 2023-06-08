@@ -2,6 +2,7 @@
 
 .container {
 	max-width: 1296px;
+	padding: 0 15px;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 	color: $white;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.container {
 		padding: 0 12px;
 	}

@@ -82,7 +82,7 @@
 }
 
 // RWD
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 	.logo h1 a {
 		width: 147px;
 		height: 24px;
@@ -115,7 +115,11 @@
 
 		li {
 			@include font($fz-display3, $lh-display3);
-			margin: 0;
+			margin: 10px 0;
+
+			a {
+				padding: 8px;
+			}
 		}
 	}
 
