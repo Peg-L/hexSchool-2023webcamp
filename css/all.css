@@ -934,18 +934,20 @@ body {
   transform: scale(1.2);
   transition: transform 0.2s linear;
 }
-.card-group .card .description {
+
+.description {
   flex-grow: 1;
 }
-.card-group .card .description p {
+.description p {
   font-size: 0.875rem;
   line-height: 1.5;
   color: #525252;
 }
-.card-group .card .tools-tag a {
+
+.tools-tag a {
   color: #020202;
 }
-.card-group .card .tools-tag a span {
+.tools-tag a span {
   font-size: 18px;
   line-height: 19.92px;
 }

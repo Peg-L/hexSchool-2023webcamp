@@ -252,22 +252,21 @@
 				}
 			}
 		}
-
-		.description {
-			flex-grow: 1;
-			p {
-				@include font($fz-small, $lh-small);
-				color: $black-80;
-			}
-		}
-		.tools-tag {
-			a {
-				color: $black-100;
-				span {
-					font-size: 18px;
-					line-height: 19.92px;
-				}
-			}
+	}
+}
+.description {
+	flex-grow: 1;
+	p {
+		@include font($fz-small, $lh-small);
+		color: $black-80;
+	}
+}
+.tools-tag {
+	a {
+		color: $black-100;
+		span {
+			font-size: 18px;
+			line-height: 19.92px;
 		}
 	}
 }
