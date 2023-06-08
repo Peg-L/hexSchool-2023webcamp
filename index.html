@@ -9,9 +9,11 @@
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
 		<link rel="stylesheet" href="css/all.css" />
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 	</head>
 	<body>
 		<div class="container center">
@@ -149,92 +151,89 @@
 				</div>
 			</div>
 
-			<ul class="recommend-list">
-				<li class="recommend-item active">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
+			<div class="swiper">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="recommend-content">
+							<div class="stars">
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+							</div>
+							<p class="recommend-comment">
+								非常喜歡 AI工具王 提供的 AI
+								模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王提供的
+								AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！
+							</p>
 						</div>
-						<p class="recommend-comment">
-							非常喜歡 AI工具王 提供的 AI
-							模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王提供的
-							AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="./images/users-avatar/user1.png" alt="用戶" />
+						<div class="recommend-user">
+							<div class="avatar">
+								<img src="./images/users-avatar/user1.png" alt="用戶" />
+							</div>
+							<div class="recommend-user-desc">
+								<h3 class="username">陳雅婷</h3>
+								<p class="company">鑫網科技有限公司</p>
+							</div>
 						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">陳雅婷</h3>
-							<p class="company">鑫網科技有限公司</p>
+					</li>
+					<li class="swiper-slide">
+						<div class="recommend-content">
+							<div class="stars">
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+							</div>
+							<p class="recommend-comment">
+								作為一家醫療器材公司，我們非常關注人工智能技術的應用，而
+								AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用
+								AI工具王
+								的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
+								AI工具王 團隊的辛勤工作！
+							</p>
 						</div>
-					</div>
-				</li>
-				<li class="recommend-item">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
+						<div class="recommend-user">
+							<div class="avatar">
+								<img src="./images/users-avatar/user2.png" alt="用戶" />
+							</div>
+							<div class="recommend-user-desc">
+								<h3 class="username">劉美娜</h3>
+								<p class="company">康和醫療器材有限公司</p>
+							</div>
 						</div>
-						<p class="recommend-comment">
-							作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王
-							提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
-							的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
-							AI工具王 團隊的辛勤工作！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="./images/users-avatar/user2.png" alt="用戶" />
+					</li>
+					<li class="swiper-slide">
+						<div class="recommend-content">
+							<div class="stars">
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+								<span class="material-symbols-outlined"> star </span>
+							</div>
+							<p class="recommend-comment">
+								我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而
+								AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用
+								AI工具王
+								的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝
+								AI工具王 團隊的支持！
+							</p>
 						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">劉美娜</h3>
-							<p class="company">康和醫療器材有限公司</p>
+						<div class="recommend-user">
+							<div class="avatar">
+								<img src="./images/users-avatar/user3.png" alt="用戶" />
+							</div>
+							<div class="recommend-user-desc">
+								<h3 class="username">黃健豪</h3>
+								<p class="company">華盛銀行</p>
+							</div>
 						</div>
-					</div>
-				</li>
-				<li class="recommend-item">
-					<div class="recommend-content">
-						<div class="stars">
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-							<span class="material-symbols-outlined"> star </span>
-						</div>
-						<p class="recommend-comment">
-							我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而
-							AI工具王 提供的 AI 模型租賃服務正好滿足了我們的需求。我們使用
-							AI工具王
-							的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝
-							AI工具王 團隊的支持！
-						</p>
-					</div>
-					<div class="recommend-user">
-						<div class="avatar">
-							<img src="./images/users-avatar/user3.png" alt="用戶" />
-						</div>
-						<div class="recommend-user-desc">
-							<h3 class="username">黃健豪</h3>
-							<p class="company">華盛銀行</p>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<div class="controls">
-				<ul>
-					<li class="control" data-index="0"></li>
-					<li class="control" data-index="1"></li>
-					<li class="control" data-index="2"></li>
+					</li>
 				</ul>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 
@@ -562,6 +561,9 @@
 			</button>
 		</div>
 
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 </html>

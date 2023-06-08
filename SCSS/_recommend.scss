@@ -1,104 +1,60 @@
-.recommend-list {
+.swiper {
 	margin-bottom: 160px;
-	color: $white;
-	display: flex;
-	gap: 24px;
 }
 
-.recommend-item {
+.swiper-slide {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	max-width: 416px;
-	padding: 40px;
-	background: rgba($white, 0.08);
+	flex-direction: column;
+	height: auto;
+	background-color: rgba($white, 0.08);
 	border-radius: 16px;
-}
-
-.stars {
-	display: flex;
-	gap: 4px;
-	margin-bottom: 20px;
-
-	.material-symbols-outlined {
-		font-size: 14px;
-	}
+	padding: 40px;
 }
 
 .recommend-content {
-	@include font($fz-body, $lh-body);
-	text-align: justify;
+	margin-bottom: 20px;
+}
+
+.stars {
+	margin-bottom: 20px;
 }
 
 .recommend-comment {
-	max-height: 215px;
-	margin-bottom: 20px;
-	color: $black-20;
-	// flex-grow: 1;
+	@include font($fz-body, $lh-body);
 }
 
 .recommend-user {
 	display: flex;
-	align-items: center;
-	.avatar {
-		max-width: 48px;
-		margin-right: 16px;
-	}
-	&-desc {
-		h3 {
-			@include font($fz-body, $lh-body);
-			font-weight: 700;
-			margin-bottom: 4px;
-		}
-		p {
-			@include font($fz-small, $lh-small);
-		}
-	}
 }
 
-// RWD
-@media (max-width: 768px) {
-	.controls {
-		position: relative;
-		text-align: center;
-		margin-bottom: 120px;
-	}
+.avatar {
+	margin-right: 16px;
+}
 
-	.controls ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+.username {
+	font-weight: 700;
+	margin-bottom: 4px;
+}
 
-	.controls ul li {
-		width: 8px;
-		height: 8px;
-		margin: 0px 4px;
-		border-radius: 50%;
-		background: $black-80;
-		cursor: pointer;
-	}
+.company {
+	@include font($fz-small, $lh-small);
+}
 
-	.controls ul li.active {
-		width: 12px;
-		height: 12px;
-		background: $white;
-	}
+.swiper-wrapper {
+	padding-bottom: 40px;
+}
 
-	.recommend-list {
-		margin-bottom: 24px;
-	}
+.swiper-pagination-bullets {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	.recommend-item {
-		display: none;
-	}
-
-	.recommend-item.active {
-		display: block;
-		width: 351px;
-		padding: 20px;
-	}
-	.recommend-comment {
-		min-height: 167px;
-	}
+.swiper-pagination-bullet {
+	background-color: $white;
+}
+.swiper-pagination-bullet-active {
+	width: 12px;
+	height: 12px;
 }

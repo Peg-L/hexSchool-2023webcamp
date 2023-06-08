@@ -608,102 +608,70 @@ body {
     margin-left: -25px;
   }
 }
-.recommend-list {
+.swiper {
   margin-bottom: 160px;
-  color: #ffffff;
-  display: flex;
-  gap: 24px;
 }
 
-.recommend-item {
+.swiper-slide {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  max-width: 416px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.08);
+  flex-direction: column;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-}
-
-.stars {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 20px;
-}
-.stars .material-symbols-outlined {
-  font-size: 14px;
+  padding: 40px;
 }
 
 .recommend-content {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.stars {
+  margin-bottom: 20px;
 }
 
 .recommend-comment {
-  max-height: 215px;
-  margin-bottom: 20px;
-  color: #f2f2f2;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .recommend-user {
   display: flex;
-  align-items: center;
 }
-.recommend-user .avatar {
-  max-width: 48px;
+
+.avatar {
   margin-right: 16px;
 }
-.recommend-user-desc h3 {
-  font-size: 1rem;
-  line-height: 1.5;
+
+.username {
   font-weight: 700;
   margin-bottom: 4px;
 }
-.recommend-user-desc p {
+
+.company {
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .controls {
-    position: relative;
-    text-align: center;
-    margin-bottom: 120px;
-  }
-  .controls ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .controls ul li {
-    width: 8px;
-    height: 8px;
-    margin: 0px 4px;
-    border-radius: 50%;
-    background: #525252;
-    cursor: pointer;
-  }
-  .controls ul li.active {
-    width: 12px;
-    height: 12px;
-    background: #ffffff;
-  }
-  .recommend-list {
-    margin-bottom: 24px;
-  }
-  .recommend-item {
-    display: none;
-  }
-  .recommend-item.active {
-    display: block;
-    width: 351px;
-    padding: 20px;
-  }
-  .recommend-comment {
-    min-height: 167px;
-  }
+.swiper-wrapper {
+  padding-bottom: 40px;
 }
+
+.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+}
+
 .bg-white {
   background-color: #ffffff;
   border-radius: 160px;
