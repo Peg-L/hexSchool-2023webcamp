@@ -12,13 +12,57 @@ dropDownBtns.forEach((button, index) => {
 	});
 });
 
+// 分類標籤
+const categories = document.querySelectorAll(".category li");
+categories.forEach((item) => {
+	item.addEventListener("click", () => {
+		categories.forEach((category) => {
+			category.classList.remove("active");
+		});
+
+		if (item.textContent === "全部") {
+			data.type = "";
+			item.classList.add("active");
+		} else {
+			data.type = item.textContent;
+			item.classList.add("active");
+		}
+
+		getData(data);
+	});
+});
+
+// 重新渲染分類標籤
+
 // --- 時間排序
 const sortByTimeBtn = document.querySelector(".sortByTimeBtn");
 const sortByTime = document.querySelector(".sortByTime");
+const desc = document.querySelector("#desc");
+const asc = document.querySelector("#asc");
 
 sortByTimeBtn.addEventListener("click", function (event) {
 	event.preventDefault();
 	sortByTime.classList.toggle("active");
+});
+
+// 由新到舊
+desc.addEventListener("click", (e) => {
+	e.preventDefault();
+	data.sort = 0;
+	getData(data);
+	sortByTimeBtn.innerHTML = `由新到舊<span class="material-symbols-outlined">
+								keyboard_arrow_down
+							</span>`;
+});
+
+// 由舊到新
+asc.addEventListener("click", (e) => {
+	e.preventDefault();
+	data.sort = 1;
+	getData(data);
+	sortByTimeBtn.innerHTML = `由舊到新<span class="material-symbols-outlined">
+								keyboard_arrow_down
+							</span>`;
 });
 
 // BackToTop 按鈕

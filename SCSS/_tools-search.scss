@@ -184,15 +184,22 @@
 		&:hover {
 			background-color: $black-20;
 			border-radius: 16px;
+			color: $black-60;
 		}
 	}
 }
 
 .category li.active {
-	background-color: $black-20;
+	background-color: $black-100;
 	border-radius: 16px;
-	color: $black-100;
+	color: $white;
 	font-weight: 700;
+	a {
+		&:hover {
+			background-color: $black-100;
+			color: $white;
+		}
+	}
 }
 
 // 工具卡片區

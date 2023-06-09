@@ -840,13 +840,18 @@ body {
 .category a:hover {
   background-color: #f2f2f2;
   border-radius: 16px;
+  color: #919191;
 }
 
 .category li.active {
-  background-color: #f2f2f2;
+  background-color: #020202;
   border-radius: 16px;
-  color: #020202;
+  color: #ffffff;
   font-weight: 700;
+}
+.category li.active a:hover {
+  background-color: #020202;
+  color: #ffffff;
 }
 
 .card-pd {
