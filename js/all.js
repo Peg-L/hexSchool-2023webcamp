@@ -22,6 +22,14 @@ var swiper = new Swiper(".swiper", {
 	},
 });
 
+// 常見問答
+const faqs = document.querySelectorAll(".faq-content > li");
+faqs.forEach((faq) => {
+	faq.addEventListener("click", function () {
+		faq.classList.toggle("active");
+	});
+});
+
 // BackToTop 按鈕
 // 偵測往下滾動才顯示
 const backToTopBtn = document.querySelector(".backToTopBtn");
