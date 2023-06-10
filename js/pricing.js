@@ -1,25 +1,3 @@
-// 搜尋工具區按鈕
-// --- 篩選按鈕
-const dropDownBtns = document.querySelectorAll(".dropdown");
-const filterGroups = document.querySelectorAll(".filter-group");
-
-dropDownBtns.forEach((button, index) => {
-	button.addEventListener("click", function (event) {
-		event.preventDefault();
-		console.log(button);
-		filterGroups[index].classList.toggle("active");
-	});
-});
-
-// --- 時間排序
-const sortByTimeBtn = document.querySelector(".sortByTimeBtn");
-const sortByTime = document.querySelector(".sortByTime");
-
-sortByTimeBtn.addEventListener("click", function (event) {
-	event.preventDefault();
-	sortByTime.classList.toggle("active");
-});
-
 // 常見問答
 const faqs = document.querySelectorAll(".faq-content > li");
 faqs.forEach((faq) => {
@@ -175,8 +153,8 @@ function nextPage(pagesData) {
 // 分頁選染至畫面
 function renderPages(pagesData) {
 	let pageStr = "";
-	console.log(pagesData.has_pre);
-	console.log(pagesData.has_next);
+	// console.log(pagesData.has_pre);
+	// console.log(pagesData.has_next);
 
 	pageStr += `
 	<li>
@@ -204,7 +182,7 @@ function renderPages(pagesData) {
 		</a>
 	</li>`;
 
-	console.log(pageStr);
+	// console.log(pageStr);
 
 	pagination.innerHTML = pageStr;
 
@@ -212,3 +190,71 @@ function renderPages(pagesData) {
 	prePage(pagesData);
 	nextPage(pagesData);
 }
+
+// 搜尋工具區按鈕
+// --- 篩選按鈕
+const dropDownBtns = document.querySelectorAll(".dropdown");
+const filterGroups = document.querySelectorAll(".filter-group");
+
+dropDownBtns.forEach((button, index) => {
+	button.addEventListener("click", function (event) {
+		event.preventDefault();
+		filterGroups[index].classList.toggle("active");
+	});
+});
+
+// 分類標籤切換
+const categories = document.querySelectorAll(".category li");
+categories.forEach((item) => {
+	item.addEventListener("click", () => {
+		categories.forEach((category) => {
+			category.classList.remove("active");
+		});
+
+		if (item.textContent === "全部") {
+			data.type = "";
+			item.classList.add("active");
+		} else {
+			data.type = item.textContent;
+			item.classList.add("active");
+		}
+
+		getData(data);
+	});
+});
+
+// --- 時間排序
+const sortByTimeBtns = document.querySelectorAll(".sortByTimeBtn");
+const sortByTimeGroup = document.querySelectorAll(".sortByTime");
+const descGroup = document.querySelectorAll(".desc");
+const ascGroup = document.querySelectorAll(".asc");
+
+sortByTimeBtns.forEach((sortByTimeBtn) => {
+	sortByTimeBtn.addEventListener("click", function (event) {
+		event.preventDefault();
+
+		sortByTimeGroup.forEach((sortByTime) => {
+			sortByTime.classList.toggle("active");
+		});
+
+		// 由新到舊
+		descGroup.forEach((desc) => {
+			desc.addEventListener("click", (e) => {
+				e.preventDefault();
+				data.sort = 0;
+				getData(data);
+				sortByTimeBtn.innerHTML = `由新到舊<span class="material-symbols-outlined">keyboard_arrow_down</span>`;
+			});
+		});
+
+		// 由舊到新
+		ascGroup.forEach((asc) => {
+			asc.addEventListener("click", (e) => {
+				e.preventDefault();
+				data.sort = 1;
+				getData(data);
+				sortByTimeBtn.innerHTML = `由舊到新<span class="material-symbols-outlined">keyboard_arrow_down</span>`;
+			});
+		});
+	});
+});
