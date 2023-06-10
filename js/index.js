@@ -274,3 +274,17 @@ sortByTimeBtns.forEach((sortByTimeBtn) => {
 		});
 	});
 });
+
+// 搜尋功能
+const searchGroup = document.querySelectorAll(".search-input input");
+
+searchGroup.forEach((search) => {
+	search.addEventListener("keydown", (e) => {
+		if (e.keyCode === 13) {
+			// keyCode 13 是 enter 鍵
+			data.search = search.value;
+			data.page = 1;
+			getData(data);
+		}
+	});
+});
